@@ -21,10 +21,10 @@ export default function Header() {
           <Image
             src="/img/logo.svg"
             alt="Logo Adeibson Araújo"
-            width={56}
-            height={56}
+            width={100}
+            height={100}
             priority
-            className="h-14 w-14 shrink-0"
+            className="h-100px w-100px shrink-0"
           />
           <div className="leading-tight">
             <div className="text-lg font-semibold tracking-wide text-[#CCAE89]">
@@ -49,7 +49,7 @@ export default function Header() {
         </nav>
 
         <a
-          href="#duvidas-frequentes"
+          href="#"
           className="inline-flex h-11 items-center justify-center rounded-full bg-white px-7 text-base font-semibold text-[#022E4A] transition-opacity hover:opacity-90"
         >
           Fale comigo
