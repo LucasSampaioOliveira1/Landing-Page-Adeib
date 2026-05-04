@@ -1,0 +1,44 @@
+export default function Home() {
+  return (
+    <section
+      className="relative flex min-h-screen items-center overflow-hidden bg-white"
+      style={{
+        backgroundImage:
+          "linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.92) 32%, rgba(255, 255, 255, 0.72) 50%, rgba(255, 255, 255, 0.2) 68%, rgba(255, 255, 255, 0) 100%), url('/img/Foto3.svg')",
+        backgroundPosition: "center right",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+    >
+      <div className="mx-auto flex w-full max-w-7xl px-6 py-20 sm:px-10 lg:px-16">
+        <div className="max-w-xl text-[#022E4A]">
+          <span className="mb-4 block text-sm font-medium uppercase tracking-[0.3em] sm:text-base">
+            Psicóloga clínica
+          </span>
+
+          <h1 className="text-4xl font-light leading-tight sm:text-5xl lg:text-6xl">
+            Recupere o equilíbrio emocional e alivie a ansiedade.
+          </h1>
+
+          <p className="mt-8 text-lg font-semibold leading-8 sm:text-xl">
+            Atendimento acolhedor para quem deseja viver com mais leveza,
+            segurança e clareza emocional.
+          </p>
+
+          <p className="mt-5 text-base leading-8 sm:text-lg">
+            Com escuta sensível e acompanhamento individualizado, você encontra
+            um espaço seguro para compreender suas emoções, fortalecer sua
+            autoestima e construir uma rotina mais saudável.
+          </p>
+
+          <a
+            href="#contato"
+            className="mt-10 inline-flex rounded-full bg-[#022E4A] px-8 py-4 text-base font-semibold text-white transition hover:opacity-90 sm:text-lg"
+          >
+            Fale comigo
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
