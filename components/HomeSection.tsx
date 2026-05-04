@@ -4,10 +4,10 @@ export default function Home() {
       className="relative flex min-h-screen items-center overflow-hidden bg-white"
       style={{
         backgroundImage:
-          "linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.92) 32%, rgba(255, 255, 255, 0.72) 50%, rgba(255, 255, 255, 0.2) 68%, rgba(255, 255, 255, 0) 100%), url('/img/Foto3.svg')",
-        backgroundPosition: "center right",
+          "linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.92) 28%, rgba(255, 255, 255, 0.55) 40%, rgba(255, 255, 255, 0.12) 52%, rgba(255, 255, 255, 0) 62%), url('/img/Foto3.svg')",
+        backgroundPosition: "right center",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
+        backgroundSize: "50%",
       }}
     >
       <div className="mx-auto flex w-full max-w-7xl px-6 py-20 sm:px-10 lg:px-16">
