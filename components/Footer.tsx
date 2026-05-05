@@ -29,7 +29,7 @@ export default function Footer() {
                   Adeibson Araújo
                 </div>
                 <div className="text-xs font-medium tracking-[0.18em] text-[#BE925C]">
-                  PSICOLOGIA CLÍNICA
+                  PSICÓLOGO CLÍNICO
                 </div>
               </div>
             </div>

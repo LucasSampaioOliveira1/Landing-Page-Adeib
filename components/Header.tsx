@@ -91,7 +91,7 @@ export default function Header() {
               Adeibson Araújo
             </div>
             <div className="text-sm font-medium tracking-[0.18em] text-[#CCAE89]">
-              PSICOLOGIA CLÍNICA
+              PSICÓLOGO CLÍNICO
             </div>
           </div>
         </a>
