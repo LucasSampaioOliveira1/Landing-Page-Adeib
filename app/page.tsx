@@ -4,6 +4,7 @@ import ComoPodeAjudar from "../components/ComoPodeAjudar";
 import Sobre from "../components/Sobre";
 import Depoimentos from "../components/Depoimentos";
 import PerguntasFre from "../components/PerguntasFre";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Sobre />
       <Depoimentos />
       <PerguntasFre />
+      <Footer />
     </div>
   );
 }
