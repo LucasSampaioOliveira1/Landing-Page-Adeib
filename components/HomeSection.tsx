@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <section
-      className="relative flex min-h-screen items-center overflow-hidden bg-white max-[920px]:!bg-none"
+      className="relative flex min-h-screen items-center overflow-hidden bg-white"
       style={{
         backgroundImage:
           "linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.92) 28%, rgba(255, 255, 255, 0.55) 40%, rgba(255, 255, 255, 0.12) 52%, rgba(255, 255, 255, 0) 62%), url('/img/Foto3.svg')",
@@ -12,9 +12,9 @@ export default function Home() {
     >
       <div className="mx-auto flex w-full max-w-7xl px-6 py-20 sm:px-10 lg:px-16">
         <div className="max-w-xl text-[#5C6D7E]">
-          <span className="mb-4 block text-sm font-medium uppercase tracking-[0.3em] sm:text-base text-black">
-            Psicóloga clínica
-          </span>
+          {/* <span className="mb-4 block text-sm font-medium uppercase tracking-[0.3em] sm:text-base text-black">
+            Psicólogo Aba
+          </span> */}
 
           <h1 className="text-4xl font-light leading-tight sm:text-5xl lg:text-6xl">
             Recupere o equilíbrio emocional e alivie a ansiedade.

@@ -70,7 +70,7 @@ export default function Footer() {
                     />
                   </svg>
                 </FooterIcon>
-                contato@exemplo.com
+                adeibson-silva@hotmail.com
               </a>
 
               <a
@@ -93,7 +93,7 @@ export default function Footer() {
                     />
                   </svg>
                 </FooterIcon>
-                (00) 00000-0000
+                (98) 8408-5515
               </a>
 
               <a
@@ -176,13 +176,13 @@ export default function Footer() {
             <div className="mt-5 grid gap-3 text-sm text-white/85">
               <div>
                 <span className="font-semibold text-[#BE925C]">CRP:</span>{" "}
-                00/00000
+                10/12125
               </div>
               <div>
                 <span className="font-semibold text-[#BE925C]">
                   Especialidade:
                 </span>{" "}
-                Psicologia clínica
+                Psicologia Aba
               </div>
               <div>
                 <span className="font-semibold text-[#BE925C]">Atendimento:</span>{" "}
