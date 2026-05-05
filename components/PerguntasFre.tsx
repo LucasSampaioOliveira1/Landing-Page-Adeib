@@ -61,7 +61,7 @@ export default function PerguntasFre() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="perguntas-frequentes" className="bg-[#FFFFFF] font-[family-name:var(--font-geist-sans)] antialiased">
+    <section id="perguntas-frequentes" className="bg-[#FFFFFF] font-(family-name:--font-geist-sans) antialiased">
       <div className="mx-auto w-full max-w-7xl px-6 py-18 sm:px-10 sm:py-22 lg:px-16 lg:py-24">
         <h2 className="text-center text-4xl font-semibold tracking-tight text-[#5C6D7E] sm:text-5xl">
           Perguntas frequentes
@@ -80,9 +80,9 @@ export default function PerguntasFre() {
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   aria-expanded={isOpen}
-                  className="flex min-h-[84px] w-full items-center justify-between gap-5 px-6 py-5 text-left transition-colors duration-300 hover:bg-[#f7f7f7] sm:px-8"
+                  className="flex min-h-21 w-full items-center justify-between gap-5 px-6 py-5 text-left transition-colors duration-300 hover:bg-[#f7f7f7] sm:px-8"
                 >
-                  <span className="text-[clamp(1.2rem,1.5vw,1.7rem)] font-medium leading-[1.25] text-[#5C6D7E]">
+                  <span className="text-[clamp(1.2rem,1.5vw,1.7rem)] font-medium leading-tight text-[#5C6D7E]">
                     {faq.question}
                   </span>
                   <Chevron isOpen={isOpen} />
@@ -94,7 +94,7 @@ export default function PerguntasFre() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="px-6 pb-6 font-[family-name:var(--font-inter)] text-[0.98rem] leading-7 text-[#5C6D7F] sm:px-8">
+                    <div className="px-6 pb-6 font-(family-name:--font-inter) text-[0.98rem] leading-7 text-[#5C6D7F] sm:px-8">
                       {faq.answer}
                     </div>
                   </div>
