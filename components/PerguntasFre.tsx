@@ -62,27 +62,27 @@ export default function PerguntasFre() {
 
   return (
     <section id="perguntas-frequentes" className="bg-[#FFFFFF] font-(family-name:--font-geist-sans) antialiased">
-      <div className="mx-auto w-full max-w-7xl px-6 py-18 sm:px-10 sm:py-22 lg:px-16 lg:py-24">
-        <h2 className="text-center text-4xl font-semibold tracking-tight text-[#5C6D7E] sm:text-5xl">
+      <div className="mx-auto w-full max-w-7xl px-6 py-14 sm:px-10 sm:py-16 lg:px-16 lg:py-18">
+        <h2 className="text-center text-3xl font-semibold tracking-tight text-[#5C6D7E] sm:text-4xl">
           Perguntas frequentes
         </h2>
 
-        <div className="mx-auto mt-14 flex w-full max-w-6xl flex-col gap-6">
+        <div className="mx-auto mt-10 flex w-full max-w-5xl flex-col gap-4 sm:gap-5">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
 
             return (
               <div
                 key={faq.question}
-                className="overflow-hidden rounded-[14px] bg-[#FFFFFF] shadow-[0_6px_14px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_20px_rgba(0,0,0,0.16)]"
+                className="overflow-hidden rounded-[12px] bg-[#FFFFFF] shadow-[0_4px_10px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_16px_rgba(0,0,0,0.14)]"
               >
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   aria-expanded={isOpen}
-                  className="flex min-h-21 w-full items-center justify-between gap-5 px-6 py-5 text-left transition-colors duration-300 hover:bg-[#f7f7f7] sm:px-8"
+                  className="flex min-h-16 w-full items-center justify-between gap-4 px-5 py-4 text-left transition-colors duration-300 hover:bg-[#f7f7f7] sm:px-6"
                 >
-                  <span className="text-[clamp(1.2rem,1.5vw,1.7rem)] font-medium leading-tight text-[#5C6D7E]">
+                  <span className="text-[1rem] font-medium leading-tight text-[#5C6D7E] sm:text-[1.1rem]">
                     {faq.question}
                   </span>
                   <Chevron isOpen={isOpen} />
@@ -94,7 +94,7 @@ export default function PerguntasFre() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="px-6 pb-6 font-(family-name:--font-inter) text-[0.98rem] leading-7 text-[#5C6D7F] sm:px-8">
+                    <div className="px-5 pb-4 font-(family-name:--font-inter) text-[0.92rem] leading-6 text-[#5C6D7F] sm:px-6 sm:text-[0.95rem]">
                       {faq.answer}
                     </div>
                   </div>
