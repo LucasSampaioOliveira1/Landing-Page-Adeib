@@ -29,7 +29,7 @@ export default function Footer() {
                   Adeibson Araújo
                 </div>
                 <div className="text-xs font-medium tracking-[0.18em] text-[#BE925C]">
-                  PSICOLOGIA • ABA
+                  PSICOLOGIA CLÍNICA
                 </div>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function Footer() {
                 <span className="font-semibold text-[#BE925C]">
                   Especialidade:
                 </span>{" "}
-                Psicologia Aba
+                Psicologia Clínica
               </div>
               <div>
                 <span className="font-semibold text-[#BE925C]">Atendimento:</span>{" "}
