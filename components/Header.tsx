@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Manrope } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import { useEffect, useState } from "react";
 
 type NavItem = {
@@ -16,9 +16,9 @@ const navItems: NavItem[] = [
   { label: "Perguntas frequentes", href: "#perguntas-frequentes" },
 ];
 
-const manrope = Manrope({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  weight: ["700"],
+  weight: ["600", "700"],
 });
 
 export default function Header() {
@@ -86,7 +86,7 @@ export default function Header() {
           />
           <div className="leading-tight">
             <div
-              className={`${manrope.className} text-lg font-semibold tracking-[0.01em] text-[#ffffff]`}
+              className={`${playfair.className} text-lg font-semibold tracking-[0.01em] text-[#ffffff]`}
             >
               Adeibson Araújo
             </div>
