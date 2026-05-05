@@ -112,6 +112,52 @@ function InitialsAvatar({ name }: { name: string }) {
   );
 }
 
+function ArrowButton({
+  direction,
+  onClick,
+  disabled,
+}: {
+  direction: "prev" | "next";
+  onClick: () => void;
+  disabled: boolean;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={disabled}
+      aria-label={direction === "prev" ? "Depoimentos anteriores" : "Próximos depoimentos"}
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/90 text-[#C99658] shadow-sm transition-opacity hover:opacity-95 disabled:opacity-40 md:h-11 md:w-11"
+    >
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        {direction === "prev" ? (
+          <path
+            d="M14.5 5 8 11.5 14.5 18"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        ) : (
+          <path
+            d="M9.5 5 16 11.5 9.5 18"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        )}
+      </svg>
+    </button>
+  );
+}
+
 export default function Depoimentos() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCards, setVisibleCards] = useState(3);
@@ -168,30 +214,88 @@ export default function Depoimentos() {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-[auto_1fr_auto] items-center gap-5">
-          <button
-            type="button"
+        <div className="relative mt-12 md:hidden">
+          <div className="pointer-events-none absolute left-0 top-1/2 z-10 -translate-y-1/2">
+            <div className="pointer-events-auto">
+              <ArrowButton
+                direction="prev"
+                onClick={() => scrollToNeighbor(-1)}
+                disabled={!canPrev}
+              />
+            </div>
+          </div>
+
+          <div className="px-14">
+            <div className="overflow-hidden pb-4">
+              <div
+                className="flex transition-transform ease-[cubic-bezier(0.22,1,0.36,1)]"
+                style={{
+                  transform: `translate3d(-${(normalizedIndex * 100) / visibleCards}%, 0, 0)`,
+                  transitionDuration: "1100ms",
+                }}
+              >
+                {testimonials.map((t) => (
+                  <div
+                    key={t.name}
+                    className="shrink-0 px-3"
+                    style={{ width: `${100 / visibleCards}%` }}
+                  >
+                    <article className="mx-auto w-full max-w-90 rounded-3xl bg-white p-6 shadow-[0_10px_28px_rgba(0,0,0,0.18)]">
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="flex min-w-0 items-center gap-3">
+                          <InitialsAvatar name={t.name} />
+                          <div className="min-w-0">
+                            <div className="truncate text-sm font-semibold text-[#1F2937]">
+                              {t.name}
+                            </div>
+                            <div className="text-xs text-[#1F2937]/60">
+                              {t.time}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="shrink-0">
+                          <GoogleMark />
+                        </div>
+                      </div>
+
+                      <div className="mt-4 flex items-center gap-1">
+                        {Array.from({ length: 5 }).map((_, i) => (
+                          <Star key={i} filled={i < t.rating} />
+                        ))}
+                        <span className="ml-2 text-xs font-semibold text-[#C99658]">
+                          {t.rating.toFixed(1)}
+                        </span>
+                      </div>
+
+                      <p className="mt-4 text-sm leading-relaxed text-[#1F2937]/80">
+                        {t.text}
+                      </p>
+
+                      <div className="mt-6 h-px w-full bg-[#C99658]/20" />
+                    </article>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="pointer-events-none absolute right-0 top-1/2 z-10 -translate-y-1/2">
+            <div className="pointer-events-auto">
+              <ArrowButton
+                direction="next"
+                onClick={() => scrollToNeighbor(1)}
+                disabled={!canNext}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 hidden grid-cols-[auto_1fr_auto] items-center gap-5 md:grid">
+          <ArrowButton
+            direction="prev"
             onClick={() => scrollToNeighbor(-1)}
             disabled={!canPrev}
-            aria-label="Depoimentos anteriores"
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-white/90 text-[#C99658] shadow-sm transition-opacity hover:opacity-95 disabled:opacity-40"
-          >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M14.5 5 8 11.5 14.5 18"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
+          />
 
           <div className="min-w-0">
             <div className="overflow-hidden pb-4">
@@ -202,72 +306,56 @@ export default function Depoimentos() {
                   transitionDuration: "1100ms",
                 }}
               >
-              {testimonials.map((t) => (
-                <div
-                  key={t.name}
-                  className="shrink-0 px-3"
-                  style={{ width: `${100 / visibleCards}%` }}
-                >
-                  <article className="rounded-3xl bg-white p-6 shadow-[0_10px_28px_rgba(0,0,0,0.18)]">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex items-center gap-3">
-                        <InitialsAvatar name={t.name} />
-                        <div className="min-w-0">
-                          <div className="truncate text-sm font-semibold text-[#1F2937]">
-                            {t.name}
+                {testimonials.map((t) => (
+                  <div
+                    key={t.name}
+                    className="shrink-0 px-3"
+                    style={{ width: `${100 / visibleCards}%` }}
+                  >
+                    <article className="rounded-3xl bg-white p-6 shadow-[0_10px_28px_rgba(0,0,0,0.18)]">
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="flex items-center gap-3">
+                          <InitialsAvatar name={t.name} />
+                          <div className="min-w-0">
+                            <div className="truncate text-sm font-semibold text-[#1F2937]">
+                              {t.name}
+                            </div>
+                            <div className="text-xs text-[#1F2937]/60">
+                              {t.time}
+                            </div>
                           </div>
-                          <div className="text-xs text-[#1F2937]/60">{t.time}</div>
+                        </div>
+                        <div className="shrink-0">
+                          <GoogleMark />
                         </div>
                       </div>
-                      <div className="shrink-0">
-                        <GoogleMark />
+
+                      <div className="mt-4 flex items-center gap-1">
+                        {Array.from({ length: 5 }).map((_, i) => (
+                          <Star key={i} filled={i < t.rating} />
+                        ))}
+                        <span className="ml-2 text-xs font-semibold text-[#C99658]">
+                          {t.rating.toFixed(1)}
+                        </span>
                       </div>
-                    </div>
 
-                    <div className="mt-4 flex items-center gap-1">
-                      {Array.from({ length: 5 }).map((_, i) => (
-                        <Star key={i} filled={i < t.rating} />
-                      ))}
-                      <span className="ml-2 text-xs font-semibold text-[#C99658]">
-                        {t.rating.toFixed(1)}
-                      </span>
-                    </div>
+                      <p className="mt-4 text-sm leading-relaxed text-[#1F2937]/80">
+                        {t.text}
+                      </p>
 
-                    <p className="mt-4 text-sm leading-relaxed text-[#1F2937]/80">
-                      {t.text}
-                    </p>
-
-                    <div className="mt-6 h-px w-full bg-[#C99658]/20" />
-                  </article>
-                </div>
-              ))}
+                      <div className="mt-6 h-px w-full bg-[#C99658]/20" />
+                    </article>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
-          <button
-            type="button"
+          <ArrowButton
+            direction="next"
             onClick={() => scrollToNeighbor(1)}
             disabled={!canNext}
-            aria-label="Próximos depoimentos"
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-white/90 text-[#C99658] shadow-sm transition-opacity hover:opacity-95 disabled:opacity-40"
-          >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9.5 5 16 11.5 9.5 18"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
+          />
         </div>
       </div>
     </section>
