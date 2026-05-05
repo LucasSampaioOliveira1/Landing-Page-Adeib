@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { Manrope } from "next/font/google";
 import { useEffect, useState } from "react";
 
 type NavItem = {
@@ -14,6 +15,11 @@ const navItems: NavItem[] = [
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "Perguntas frequentes", href: "#perguntas-frequentes" },
 ];
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["700"],
+});
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -79,7 +85,9 @@ export default function Header() {
             className="h-14 w-14 shrink-0 sm:h-16 sm:w-16"
           />
           <div className="leading-tight">
-            <div className="text-lg font-semibold tracking-wide text-[#ffffff]">
+            <div
+              className={`${manrope.className} text-lg font-semibold tracking-[0.01em] text-[#ffffff]`}
+            >
               Adeibson Araújo
             </div>
             <div className="text-sm font-medium tracking-[0.18em] text-[#CCAE89]">
