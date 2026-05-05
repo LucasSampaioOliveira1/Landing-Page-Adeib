@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import HomeSection from "../components/HomeSection";
 import ComoPodeAjudar from "../components/ComoPodeAjudar";
 import Sobre from "../components/Sobre";
+import Depoimentos from "../components/Depoimentos";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       <HomeSection />
       <ComoPodeAjudar />
       <Sobre />
-      
+      <Depoimentos />
     </div>
   );
 }
