@@ -18,7 +18,8 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://adeibsonaraujo.netlify.app";
 const siteTitle = "Adeibson Araujo | Psicologo ABA";
 const siteDescription =
   "Psicologo ABA com atendimento acolhedor para ansiedade, desenvolvimento emocional e qualidade de vida. Atendimento online e presencial.";
