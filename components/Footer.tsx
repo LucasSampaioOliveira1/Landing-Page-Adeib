@@ -74,7 +74,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="tel:+5500000000000"
+                href="https://wa.me/+559884085515"
                 className="flex items-center gap-3 text-sm text-white/85 transition-opacity hover:opacity-95"
               >
                 <FooterIcon>

@@ -102,7 +102,7 @@ export default function Header() {
         </nav>
 
         <a
-          href="#contato"
+          href="https://wa.me/+559884085515"
           className="hidden h-11 items-center justify-center rounded-full bg-[#C99658] px-7 text-base font-semibold text-[#ffffff] transition-opacity hover:opacity-90 md:inline-flex"
         >
           Fale comigo
@@ -157,7 +157,7 @@ export default function Header() {
                 </a>
               ))}
               <a
-                href="#contato"
+                href="https://wa.me/+559884085515"
                 onClick={() => setMenuOpen(false)}
                 className="mt-2 inline-flex h-11 items-center justify-center rounded-full bg-[#C99658] px-7 text-base font-semibold text-white transition-opacity hover:opacity-90"
               >

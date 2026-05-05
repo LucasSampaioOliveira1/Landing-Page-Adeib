@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <section
-      className="relative flex min-h-screen items-center overflow-hidden bg-white max-[920px]:!bg-none"
+      className="relative flex min-h-screen items-center overflow-hidden bg-white max-[920px]:bg-none!"
       style={{
         backgroundImage:
           "linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.92) 28%, rgba(255, 255, 255, 0.55) 40%, rgba(255, 255, 255, 0.12) 52%, rgba(255, 255, 255, 0) 62%), url('/img/Foto3.svg')",
@@ -32,7 +32,7 @@ export default function Home() {
           </p>
 
           <a
-            href="#contato"
+            href="https://wa.me/+559884085515"
             className="mt-10 inline-flex rounded-full bg-[#C99658] px-8 py-4 text-base font-semibold text-white transition hover:opacity-90 sm:text-lg"
           >
             Fale comigo
