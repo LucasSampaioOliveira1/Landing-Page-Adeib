@@ -1,3 +1,11 @@
+import PsychologyAltIcon from '@mui/icons-material/PsychologyAlt';
+import Diversity1Icon from '@mui/icons-material/Diversity1';
+import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
+import HealingIcon from '@mui/icons-material/Healing';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import TrackChangesIcon from '@mui/icons-material/TrackChanges';
+import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
+
 type Topic = {
   title: string;
   description: string;
@@ -6,8 +14,10 @@ type Topic = {
 
 function IconCircle({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#5C6D7E]/10">
-      {children}
+    <div className="relative mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-[#5C6D7E]/[0.08] transition-all duration-500 ease-out group-hover:-translate-y-1 group-hover:bg-[#BE925C] group-hover:shadow-[0_8px_20px_rgba(190,146,92,0.35)]">
+      <div className="z-10 flex items-center justify-center transition-transform duration-500 ease-out group-hover:scale-110 [&>svg]:transition-colors [&>svg]:duration-500 [&>svg]:!text-[#BE925C] group-hover:[&>svg]:!text-white">
+        {children}
+      </div>
     </div>
   );
 }
@@ -19,45 +29,17 @@ const topics: Topic[] = [
       "Encontrar novas formas de lidar com pensamentos acelerados e emoções intensas.",
     icon: (
       <IconCircle>
-        <svg
-          width="26"
-          height="26"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="text-[#BE925C]"
-        >
-          <path
-            d="M20 15a4 4 0 0 1-4 4H9l-5 3V7a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8Z"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <PsychologyAltIcon sx={{ fontSize: 30 }} className="text-[#BE925C]" />
       </IconCircle>
     ),
   },
   {
     title: "Relacionamentos",
     description:
-      "Construir vínculos mais saudáveis — começando por você mesma.",
+      "Construir vínculos mais saudáveis começando por você mesma.",
     icon: (
       <IconCircle>
-        <svg
-          width="26"
-          height="26"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="text-[#BE925C]"
-        >
-          <path
-            d="M12 21s-7-4.6-9.2-8.8C1.2 9 2.7 6.2 5.7 5.4c1.7-.4 3.4.2 4.3 1.5.9-1.3 2.6-1.9 4.3-1.5 3 .8 4.5 3.6 2.9 6.8C19 16.4 12 21 12 21Z"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <Diversity1Icon sx={{ fontSize: 30 }} className="text-[#BE925C]" />
       </IconCircle>
     ),
   },
@@ -66,26 +48,7 @@ const topics: Topic[] = [
     description: "Descubra quem você é, seus valores e para onde você deseja ir.",
     icon: (
       <IconCircle>
-        <svg
-          width="26"
-          height="26"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="text-[#BE925C]"
-        >
-          <path
-            d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z"
-            stroke="currentColor"
-            strokeWidth="1.8"
-          />
-          <path
-            d="M20 21a8 8 0 1 0-16 0"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-          />
-        </svg>
+        <SelfImprovementIcon sx={{ fontSize: 30 }} className="text-[#BE925C]" />
       </IconCircle>
     ),
   },
@@ -94,33 +57,7 @@ const topics: Topic[] = [
     description: "Retomar o sentido da vida, mesmo nos dias mais difíceis.",
     icon: (
       <IconCircle>
-        <svg
-          width="26"
-          height="26"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="text-[#BE925C]"
-        >
-          <path
-            d="M12 21s-7-4.6-9.2-8.8C1.2 9 2.7 6.2 5.7 5.4c1.7-.4 3.4.2 4.3 1.5.9-1.3 2.6-1.9 4.3-1.5 3 .8 4.5 3.6 2.9 6.8C19 16.4 12 21 12 21Z"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M12 10v4"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-          />
-          <path
-            d="M10.5 12H13.5"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-          />
-        </svg>
+        <HealingIcon sx={{ fontSize: 30 }} className="text-[#BE925C]" />
       </IconCircle>
     ),
   },
@@ -130,68 +67,7 @@ const topics: Topic[] = [
       "Um caminho para reconhecer sua força interior e se sentir bem sendo quem você é.",
     icon: (
       <IconCircle>
-        <svg
-          width="26"
-          height="26"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="text-[#BE925C]"
-        >
-          <path
-            d="M12 2v2"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-          />
-          <path
-            d="M12 20v2"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-          />
-          <path
-            d="M4 12H2"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-          />
-          <path
-            d="M22 12h-2"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-          />
-          <path
-            d="M18.4 5.6 17 7"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-          />
-          <path
-            d="M7 17 5.6 18.4"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-          />
-          <path
-            d="M18.4 18.4 17 17"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-          />
-          <path
-            d="M7 7 5.6 5.6"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-          />
-          <path
-            d="M12 16a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z"
-            stroke="currentColor"
-            strokeWidth="1.8"
-          />
-        </svg>
+        <AutoAwesomeIcon sx={{ fontSize: 30 }} className="text-[#BE925C]" />
       </IconCircle>
     ),
   },
@@ -201,27 +77,7 @@ const topics: Topic[] = [
       "Encontre o propósito em tudo o que faz e se sinta realizado ao alcançar seus objetivos.",
     icon: (
       <IconCircle>
-        <svg
-          width="26"
-          height="26"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="text-[#BE925C]"
-        >
-          <path
-            d="M12 21a9 9 0 1 0-9-9 9 9 0 0 0 9 9Z"
-            stroke="currentColor"
-            strokeWidth="1.8"
-          />
-          <path
-            d="M12 7v5l3 2"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <TrackChangesIcon sx={{ fontSize: 30 }} className="text-[#BE925C]" />
       </IconCircle>
     ),
   },
@@ -231,28 +87,7 @@ const topics: Topic[] = [
       "Cuidar da dor da ausência, respeitar o tempo de cada processo e abrir espaço para reconstruir a vida.",
     icon: (
       <IconCircle>
-        <svg
-          width="26"
-          height="26"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="text-[#BE925C]"
-        >
-          <path
-            d="M12 22s-7-4.6-9.2-8.8C1.2 10 2.7 7.2 5.7 6.4c1.7-.4 3.4.2 4.3 1.5.9-1.3 2.6-1.9 4.3-1.5 3 .8 4.5 3.6 2.9 6.8C19 17.4 12 22 12 22Z"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M8.8 12.6 10.7 14.5 15.2 10"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <VolunteerActivismIcon sx={{ fontSize: 30 }} className="text-[#BE925C]" />
       </IconCircle>
     ),
   },
@@ -270,7 +105,7 @@ export default function ComoPodeAjudar() {
           {topics.map((topic) => (
             <div
               key={topic.title}
-              className="w-full max-w-65 rounded-3xl bg-white px-7 py-8 text-center shadow-[0_8px_18px_rgba(0,0,0,0.12)] transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_12px_26px_rgba(0,0,0,0.16)]"
+              className="group w-full max-w-65 rounded-3xl bg-white px-7 py-8 text-center shadow-[0_8px_18px_rgba(0,0,0,0.12)] transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(0,0,0,0.16)] text-black"
             >
               {topic.icon}
               <div className="mt-5 text-lg font-semibold text-black">

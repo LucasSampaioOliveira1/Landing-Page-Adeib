@@ -97,7 +97,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
+                href="https://www.instagram.com/psiadeibson/"
                 className="flex items-center gap-3 text-sm text-white/85 transition-opacity hover:opacity-95"
               >
                 <FooterIcon>
@@ -126,7 +126,7 @@ export default function Footer() {
                     />
                   </svg>
                 </FooterIcon>
-                @perfil.exemplo
+                @psiadeibson
               </a>
             </div>
           </div>
@@ -161,9 +161,10 @@ export default function Footer() {
                     Atendimento online e presencial
                   </div>
                   <div className="mt-1 text-white/75">
-                    Rua Exemplo, 123 — Centro
+                    Avenida Minas Gerais, 304 Belo Horizonte
+                    <p>Edifício Matizze Office, 3° andar.</p>
                   </div>
-                  <div className="text-white/75">Sua cidade — UF</div>
+                  <div className="text-white/75">Marabá - PA</div>
                 </div>
               </div>
             </div>
