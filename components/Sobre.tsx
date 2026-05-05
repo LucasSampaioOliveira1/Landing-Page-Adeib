@@ -44,7 +44,7 @@ export default function Sobre() {
             <span className="relative inline-block">
               bem-estar
               <span
-                className={`absolute -bottom-1 left-0 h-[3px] rounded-full bg-[#BE915B] transition-[width,opacity] duration-[1400ms] ease-out ${
+                className={`absolute -bottom-1 left-0 h-0.75 rounded-full bg-linear-to-r from-[#9E7F60] to-[#CBAC87] transition-[width,opacity] duration-1400 ease-out ${
                   showUnderline ? "w-full opacity-100" : "w-0 opacity-0"
                 }`}
               />
@@ -65,7 +65,7 @@ export default function Sobre() {
           </p>
         </div>
 
-        <div className="relative min-h-[360px] w-full rounded-3xl shadow-xl transition-transform duration-500 hover:scale-[1.02] sm:min-h-[520px] lg:min-h-full">
+        <div className="relative min-h-90 w-full rounded-3xl shadow-xl transition-transform duration-500 hover:scale-[1.02] sm:min-h-130 lg:min-h-full">
           <Image
             src="/img/Fotosobre.svg"
             alt="Profissional"
