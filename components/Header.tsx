@@ -74,23 +74,23 @@ export default function Header() {
       id="site-header"
       className="fixed left-0 right-0 top-0 z-50 w-full bg-[#5C6D7E] text-[#ffffff]"
     >
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-5 py-5 sm:py-6">
-        <a href="#" onClick={(e) => onNavClick(e, "#")} className="flex items-center gap-3">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-5 py-4 sm:py-5">
+        <a href="#" onClick={(e) => onNavClick(e, "#")} className="flex items-center gap-4 sm:gap-5">
           <Image
             src="/img/logo.svg"
             alt="Logo Adeibson Araújo"
-            width={64}
-            height={64}
+            width={104}
+            height={104}
             priority
-            className="h-14 w-14 shrink-0 sm:h-16 sm:w-16"
+            className="h-18 w-18 shrink-0 sm:h-24 sm:w-24 md:h-26 md:w-26"
           />
-          <div className="leading-tight">
+          <div className="leading-none">
             <div
-              className={`${playfair.className} text-lg font-semibold tracking-[0.01em] text-[#ffffff]`}
+              className={`${playfair.className} text-[1.45rem] font-semibold tracking-[0.015em] text-[#ffffff] sm:text-[1.78rem] md:text-[1.95rem]`}
             >
               Adeibson Araújo
             </div>
-            <div className="text-sm font-medium tracking-[0.18em] text-[#CCAE89]">
+            <div className="mt-2 text-[0.48rem] font-semibold tracking-[0.36em] text-[#CCAE89] sm:text-[0.54rem] md:text-[0.58rem]">
               PSICÓLOGO CLÍNICO
             </div>
           </div>
