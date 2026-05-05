@@ -74,7 +74,7 @@ export default function PerguntasFre() {
             return (
               <div
                 key={faq.question}
-                className="overflow-hidden rounded-[12px] bg-[#FFFFFF] shadow-[0_4px_10px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_16px_rgba(0,0,0,0.14)]"
+                className="overflow-hidden rounded-xl bg-[#FFFFFF] shadow-[0_4px_10px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_16px_rgba(0,0,0,0.14)]"
               >
                 <button
                   type="button"
