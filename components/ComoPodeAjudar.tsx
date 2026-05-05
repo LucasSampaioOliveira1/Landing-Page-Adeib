@@ -14,8 +14,8 @@ type Topic = {
 
 function IconCircle({ children }: { children: React.ReactNode }) {
   return (
-    <div className="relative mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-[#5C6D7E]/[0.08] transition-all duration-500 ease-out group-hover:-translate-y-1 group-hover:bg-[#BE925C] group-hover:shadow-[0_8px_20px_rgba(190,146,92,0.35)]">
-      <div className="z-10 flex items-center justify-center transition-transform duration-500 ease-out group-hover:scale-110 [&>svg]:transition-colors [&>svg]:duration-500 [&>svg]:!text-[#BE925C] group-hover:[&>svg]:!text-white">
+    <div className="relative mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-[#5C6D7E]/8 transition-all duration-500 ease-out group-hover:-translate-y-1 group-hover:bg-[#BE925C] group-hover:shadow-[0_8px_20px_rgba(190,146,92,0.35)]">
+      <div className="z-10 flex items-center justify-center transition-transform duration-500 ease-out group-hover:scale-110 [&>svg]:transition-colors [&>svg]:duration-500 [&>svg]:text-[#BE925C]! group-hover:[&>svg]:text-white!">
         {children}
       </div>
     </div>
