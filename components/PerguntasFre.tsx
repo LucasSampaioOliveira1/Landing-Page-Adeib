@@ -4,34 +4,34 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "Como funciona a primeira sessão?",
+    question: "Como funciona a psicoterapia?",
     answer:
-      "A primeira sessão é um momento de acolhimento e escuta, em que você pode falar sobre sua história, suas dificuldades e suas expectativas em relação ao processo terapêutico.",
+      "A psicoterapia é um processo de acompanhamento psicológico baseado no diálogo. Durante as sessões, trabalhamos juntos para compreender dificuldades, desenvolver habilidades e promover bem-estar emocional.",
   },
   {
-    question: "Preciso ter um problema grave para fazer terapia?",
+    question: "Para quem a terapia é indicada?",
     answer:
-      "Não. A terapia também ajuda no autoconhecimento, na organização emocional e no desenvolvimento de estratégias para lidar melhor com o dia a dia.",
+      "A terapia é indicada para qualquer pessoa que esteja enfrentando desafios emocionais, comportamentais ou que deseje se conhecer melhor e melhorar sua qualidade de vida.",
   },
   {
-    question: "Atende online ou presencial?",
+    question: "Como saber se preciso de terapia?",
     answer:
-      "Os atendimentos podem ser realizados online ou presencialmente, conforme a disponibilidade e a necessidade de cada pessoa.",
+      "Se você sente que algo não vai bem, tem dificuldades emocionais recorrentes ou deseja apoio para lidar com situações específicas, a terapia pode ser um espaço importante de cuidado.",
   },
   {
-    question: "Aceita algum convênio?",
+    question: "Quanto tempo duram as sessões?",
     answer:
-      "Os atendimentos são particulares, mas em alguns casos é possível emitir recibo para solicitação de reembolso junto ao convênio.",
+      "As sessões têm duração média de 50 minutos, podendo ser ajustadas conforme a necessidade de cada caso.",
   },
   {
-    question: "Quanto custa?",
+    question: "Qual a diferença entre atendimento presencial e online?",
     answer:
-      "O valor pode variar conforme a modalidade de atendimento. Entre em contato para receber as informações atualizadas.",
+      "O presencial acontece no consultório, enquanto o online é realizado por videochamada. Ambos seguem os mesmos princípios éticos e têm eficácia comprovada. No atendimento online é essencial ter uma boa conexão de internet, lugar seguro e silencioso, onde você possa se sentir à vontade para falar livremente sem interrupções.",
   },
   {
-    question: "É sigiloso?",
+    question: "Qual o valor das sessões?",
     answer:
-      "Sim. Todo o processo é conduzido com ética profissional e sigilo, respeitando integralmente a privacidade das informações compartilhadas.",
+      "Os valores, assim como a disponibilidade, podem ser informados diretamente no contato.",
   },
 ];
 
