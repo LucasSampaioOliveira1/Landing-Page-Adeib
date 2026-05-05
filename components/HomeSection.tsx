@@ -11,8 +11,8 @@ export default function Home() {
       }}
     >
       <div className="mx-auto flex w-full max-w-7xl px-6 py-20 sm:px-10 lg:px-16">
-        <div className="max-w-xl text-[#022E4A]">
-          <span className="mb-4 block text-sm font-medium uppercase tracking-[0.3em] sm:text-base">
+        <div className="max-w-xl text-[#5C6D7E]">
+          <span className="mb-4 block text-sm font-medium uppercase tracking-[0.3em] sm:text-base text-black">
             Psicóloga clínica
           </span>
 
@@ -33,7 +33,7 @@ export default function Home() {
 
           <a
             href="#contato"
-            className="mt-10 inline-flex rounded-full bg-[#022E4A] px-8 py-4 text-base font-semibold text-white transition hover:opacity-90 sm:text-lg"
+            className="mt-10 inline-flex rounded-full bg-[#C99658] px-8 py-4 text-base font-semibold text-white transition hover:opacity-90 sm:text-lg"
           >
             Fale comigo
           </a>
