@@ -66,8 +66,7 @@ export default function Header() {
   return (
     <header
       id="site-header"
-      className="fixed left-0 right-0 top-0 z-9999 w-full bg-[#5C6D7E] text-[#ffffff]"
-      style={{ position: "fixed", top: 0, left: 0, right: 0, width: "100%" }}
+      className="fixed left-0 right-0 top-0 z-50 w-full bg-[#5C6D7E] text-[#ffffff]"
     >
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-5 py-5 sm:py-6">
         <a href="#" onClick={(e) => onNavClick(e, "#")} className="flex items-center gap-3">
