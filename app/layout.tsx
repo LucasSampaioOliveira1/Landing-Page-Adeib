@@ -36,6 +36,26 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Header />
         <main className="pt-24">{children}</main>
+        <a
+          href="https://wa.me/559884085515"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir conversa no WhatsApp"
+          className="fixed bottom-6 right-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#4F7B96] text-white shadow-[0_10px_24px_rgba(0,0,0,0.28)] transition-transform duration-200 hover:scale-105 hover:bg-[#456f89]"
+        >
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 32 32"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M16 3C8.8 3 3 8.8 3 16c0 2.7.9 5.2 2.3 7.2L4 29l6-1.6C12 28.3 14 29 16 29c7.2 0 13-5.8 13-13S23.2 3 16 3Zm0 23.1c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-3.5.9.9-3.4-.2-.4A10.8 10.8 0 0 1 5.2 16C5.2 10.1 10.1 5.2 16 5.2c2.9 0 5.7 1.1 7.7 3.2 2 2 3.2 4.8 3.2 7.7 0 5.9-4.9 10.9-10.9 10.9Zm6.2-8.2c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6 0c-.3-.2-1.2-.4-2.3-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.2 3.2c.1.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.8.6.8.2 1.4.2 2 .1.6-.1 1.8-.7 2-1.4s.2-1.2.2-1.4c-.1-.2-.3-.2-.6-.4Z"
+            />
+          </svg>
+        </a>
       </body>
     </html>
   );
