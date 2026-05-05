@@ -36,7 +36,7 @@ const topics: Topic[] = [
   {
     title: "Relacionamentos",
     description:
-      "Construir vínculos mais saudáveis começando por você mesma.",
+      "Construir vínculos mais saudáveis começando por você mesmo.",
     icon: (
       <IconCircle>
         <Diversity1Icon sx={{ fontSize: 30 }} className="text-[#BE925C]" />

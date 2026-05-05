@@ -17,7 +17,7 @@ export default function Home() {
           </span> */}
 
           <h1 className="text-4xl font-light leading-tight sm:text-5xl lg:text-6xl">
-            Recupere o equilíbrio emocional e alivie a ansiedade.
+            Retome o controle das suas emoções e reduza a ansiedade
           </h1>
 
           <p className="mt-8 text-lg font-semibold leading-8 sm:text-xl">
