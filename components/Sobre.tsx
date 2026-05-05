@@ -53,15 +53,11 @@ export default function Sobre() {
           </h2>
 
           <p className="mt-6 max-w-xl text-base leading-8 sm:text-lg">
-            Com atendimento ético e acolhedor, o acompanhamento é conduzido para
-            ajudar você a compreender suas emoções, enfrentar desafios com mais
-            equilíbrio e fortalecer sua saúde mental no dia a dia.
+            Sou psicólogo formado pela Universidade Federal do Maranhão (UFMA), com pós-graduação em Análise do Comportamento Aplicada e Neuropsicologia. Atuo com base em conhecimento científico, sempre buscando oferecer um atendimento ético, cuidadoso e adaptado às necessidades de cada pessoa.
           </p>
 
           <p className="mt-4 max-w-xl text-base leading-8 sm:text-lg">
-            Cada processo é individualizado, respeitando sua história e seu
-            tempo, para que você desenvolva mais clareza, autonomia e segurança
-            nas suas escolhas.
+            Valorizo muito a escuta ativa e o acolhimento, porque acredito que cada história é única e merece ser compreendida com atenção e respeito. Meu objetivo é construir, junto com você, um processo terapêutico que faça sentido e contribua de forma real para o seu desenvolvimento, bem-estar e qualidade de vida.
           </p>
         </div>
 
