@@ -3,6 +3,7 @@ import HomeSection from "../components/HomeSection";
 import ComoPodeAjudar from "../components/ComoPodeAjudar";
 import Sobre from "../components/Sobre";
 import Depoimentos from "../components/Depoimentos";
+import PerguntasFre from "../components/PerguntasFre";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ComoPodeAjudar />
       <Sobre />
       <Depoimentos />
+      <PerguntasFre />
     </div>
   );
 }
