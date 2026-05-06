@@ -4,11 +4,11 @@ import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 
 const images = [
+  { src: "/img/Sala5.png", alt: "Foto do consultório - Sala 5" },
   { src: "/img/Sala1.png", alt: "Foto do consultório - Sala 1" },
   { src: "/img/Sala2.png", alt: "Foto do consultório - Sala 2" },
   { src: "/img/Sala3.png", alt: "Foto do consultório - Sala 3" },
   { src: "/img/Sala4.png", alt: "Foto do consultório - Sala 4" },
-  { src: "/img/Sala5.png", alt: "Foto do consultório - Sala 5" },
 ];
 
 function ArrowButton({
