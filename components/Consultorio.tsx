@@ -8,6 +8,7 @@ const images = [
   { src: "/img/Sala2.png", alt: "Foto do consultório - Sala 2" },
   { src: "/img/Sala3.png", alt: "Foto do consultório - Sala 3" },
   { src: "/img/Sala4.png", alt: "Foto do consultório - Sala 4" },
+  { src: "/img/Sala5.png", alt: "Foto do consultório - Sala 5" },
 ];
 
 function ArrowButton({
