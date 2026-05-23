@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
+import Script from "next/script";
 import Header from "../components/Header";
 import "./globals.css";
 
@@ -20,6 +21,7 @@ const inter = Inter({
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://adeibsonaraujo.com/";
+const googleAnalyticsId = "G-PHBPXYLBP9";
 const siteTitle = "Adeibson Araujo | Psicologo ABA";
 const siteDescription =
   "Psicologo ABA com atendimento acolhedor para ansiedade, desenvolvimento emocional e qualidade de vida. Atendimento online e presencial.";
@@ -122,6 +124,19 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', '${googleAnalyticsId}');
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
